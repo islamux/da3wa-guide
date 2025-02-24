@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعاة بلغات أخرى</title>
+    <style>
+        body { font-family: Arial, sans-serif; direction: rtl; }
+        .preacher { margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <h1>دعاة بلغات أخرى</h1>
+    {% for preacher in preachers %}
+    <div class="preacher">
+        <h2>{{ preacher.name }} ({{ preacher.language }})</h2>
+        <p>{{ preacher.bio }}</p>
+        <a href="{{ preacher.youtube_link }}" target="_blank">قناة يوتيوب</a> |
+        <a href="{{ preacher.facebook_link }}" target="_blank">صفحة فيسبوك</a>
+    </div>
+    {% endfor %}
+</body>
+</html>
