@@ -1,17 +1,30 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دليل الدعاة</title>
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}الصفحة الرئيسية{% endblock %}
+
+{% block content %}
+<div class="hero">
     <h1>مرحبًا بك في دليل الدعاة</h1>
     <p>اختر القسم الذي ترغب في زيارته:</p>
-    <a href="/comparisons/">مقارنة الأديان</a>
-    <a href="/famous/">دعاة مشاهير</a>
-    <a href="/multilingual/">دعاة بلغات أخرى</a>
-</body>
-</html>
+</div>
+
+<div class="sections">
+    <a href="/comparisons/" class="section-card">
+        <i class="fas fa-book icon"></i> <!-- أيقونة كتاب -->
+        <h2>مقارنة الأديان</h2>
+        <p>تعرف على الأديان المختلفة ومقارنتها.</p>
+    </a>
+
+    <a href="/famous/" class="section-card">
+        <i class="fas fa-star icon"></i> <!-- أيقونة نجمة -->
+        <h2>دعاة مشاهير</h2>
+        <p>اكتشف قصص الدعاة المشاهير وأعمالهم.</p>
+    </a>
+
+    <a href="/multilingual/" class="section-card">
+        <i class="fas fa-globe icon"></i> <!-- أيقونة كرة الأرضية -->
+        <h2>دعاة بلغات أخرى</h2>
+        <p>استمع إلى الدعاة الذين يتحدثون بلغات مختلفة.</p>
+    </a>
+</div>
+{% endblock %}
