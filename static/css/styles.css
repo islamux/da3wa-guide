@@ -1,0 +1,30 @@
+/* اتجاه النص */
+body {
+    direction: rtl;
+    text-align: right;
+    font-family: Arial, sans-serif;
+}
+
+/* جداول البيانات */
+table {
+    direction: rtl;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: right; /* محاذاة النص إلى اليمين */
+}
+
+/* الروابط */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

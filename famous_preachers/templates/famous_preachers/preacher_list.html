@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>دعاة مشاهير</title>
-    <style>
-        body { font-family: Arial, sans-serif; direction: rtl; }
-        .preacher { margin-bottom: 20px; }
-    </style>
 </head>
 <body>
     <h1>دعاة مشاهير</h1>
     {% for preacher in preachers %}
-    <div class="preacher">
+    <div>
         <h2>{{ preacher.name }}</h2>
         <p>{{ preacher.bio }}</p>
-        <a href="{{ preacher.youtube_link }}" target="_blank">قناة يوتيوب</a> |
-        <a href="{{ preacher.facebook_link }}" target="_blank">صفحة فيسبوك</a>
+        <a href="{{ preacher.facebook_link }}" target="_blank">Facebook</a> |
+        <a href="{{ preacher.youtube_link }}" target="_blank">YouTube</a>
     </div>
     {% endfor %}
 </body>

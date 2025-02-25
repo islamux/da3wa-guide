@@ -1,28 +1,27 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مقارنة الأديان</title>
-    <style>
-        body { font-family: Arial, sans-serif; direction: rtl; }
-        table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #ddd; padding: 8px; text-align: center; }
-    </style>
 </head>
 <body>
     <h1>مقارنة الأديان</h1>
-    <table>
+    <table border="1">
         <tr>
-            <th>اسم الدين</th>
+            <th>الاسم</th>
             <th>المبادئ</th>
             <th>ملاحظات المقارنة</th>
+            <th>فيسبوك</th>
+            <th>يوتيوب</th>
         </tr>
         {% for religion in religions %}
         <tr>
             <td>{{ religion.name }}</td>
             <td>{{ religion.principles }}</td>
             <td>{{ religion.comparison_notes }}</td>
+            <td><a href="{{ religion.facebook_link }}" target="_blank">Facebook</a></td>
+            <td><a href="{{ religion.youtube_link }}" target="_blank">YouTube</a></td>
         </tr>
         {% endfor %}
     </table>
