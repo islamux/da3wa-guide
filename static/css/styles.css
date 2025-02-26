@@ -63,3 +63,24 @@ body {
 .section-card a:hover {
     text-decoration: underline;
 }
+
+/* زر العودة إلى الصفحة الرئيسية */
+.back-to-home {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2193b0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-home:hover {
+    background-color: #1a7593;
+}
+
+.back-to-home i {
+    margin-left: 5px;
+}
