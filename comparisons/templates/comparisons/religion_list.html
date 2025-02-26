@@ -1,29 +1,19 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مقارنة الأديان</title>
-</head>
-<body>
-    <h1>مقارنة الأديان</h1>
-    <table border="1">
-        <tr>
-            <th>الاسم</th>
-            <th>المبادئ</th>
-            <th>ملاحظات المقارنة</th>
-            <th>فيسبوك</th>
-            <th>يوتيوب</th>
-        </tr>
-        {% for religion in religions %}
-        <tr>
-            <td>{{ religion.name }}</td>
-            <td>{{ religion.principles }}</td>
-            <td>{{ religion.comparison_notes }}</td>
-            <td><a href="{{ religion.facebook_link }}" target="_blank">Facebook</a></td>
-            <td><a href="{{ religion.youtube_link }}" target="_blank">YouTube</a></td>
-        </tr>
-        {% endfor %}
-    </table>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}مقارنة الأديان{% endblock %}
+
+{% block content %}
+<h1>مقارنة الأديان</h1>
+
+<div class="sections">
+    {% for religion in religions %}
+    <div class="section-card">
+        <i class="fas fa-book icon"></i>
+        <h2>{{ religion.name }}</h2>
+        <p>دين يُقارن مع الأديان الأخرى.</p>
+        <a href="{{ religion.facebook_link }}" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
+        <a href="{{ religion.youtube_link }}" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

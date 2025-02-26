@@ -9,24 +9,6 @@ body {
     color: #333;
 }
 
-/* القسم العلوي (Hero Section) */
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: linear-gradient(135deg, #6dd5ed, #2193b0);
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    font-size: 1.2rem;
-}
-
 /* قسم الروابط */
 .sections {
     display: flex;
@@ -70,4 +52,14 @@ body {
 .section-card p {
     font-size: 1rem;
     color: #666;
+}
+
+.section-card a {
+    color: #007bff;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+.section-card a:hover {
+    text-decoration: underline;
 }

@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>دعاة مشاهير</title>
-</head>
-<body>
-    <h1>دعاة مشاهير</h1>
+{% extends 'base.html' %}
+
+{% block title %}دعاة مشاهير{% endblock %}
+
+{% block content %}
+<h1>دعاة مشاهير </h1>
+
+<div class="sections">
     {% for preacher in preachers %}
-    <div>
-        <h2>{{ preacher.name }}</h2>
+    <div class="section-card">
+        <i class="fas fa-globe icon"></i>
+        <h2>{{ preacher.name }} ({{ preacher.language }})</h2>
         <p>{{ preacher.bio }}</p>
-        <a href="{{ preacher.facebook_link }}" target="_blank">Facebook</a> |
-        <a href="{{ preacher.youtube_link }}" target="_blank">YouTube</a>
+        <a href="{{ preacher.facebook_link }}" target="_blank"><i class="fab fa-facebook"></i> Facebook</a> |
+        <a href="{{ preacher.youtube_link }}" target="_blank"><i class="fab fa-youtube"></i> YouTube</a>
     </div>
     {% endfor %}
-</body>
-</html>
+</div>
+{% endblock %}/html>
