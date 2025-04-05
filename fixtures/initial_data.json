@@ -1,15 +1,26 @@
 [
+     
+    {
+        "model": "comparisons.religion",
+        "pk": 2,
+        "fields": {
+            "name": "باسم سليمان ",
+            "facebook_link": "https://www.facebook.com",
+            "youtube_link": "https://www.youtube.com"
+        }
+    },
+
+
     {
         "model": "comparisons.religion",
         "pk": 1,
         "fields": {
             "name": "معاذ عليان",
-            "principles": "مبادئ الدين الإسلامي",
-            "comparison_notes": "مقارنة بين الإسلام والأديان الأخرى",
             "facebook_link": "https://www.facebook.com",
             "youtube_link": "https://www.youtube.com"
         }
     },
+
     {
         "model": "famous_preachers.famouspreacher",
         "pk": 1,
@@ -20,6 +31,7 @@
             "youtube_link": "https://www.youtube.com"
         }
     },
+
     {
         "model": "multilingual_preachers.multilingualpreacher",
         "pk": 1,
